@@ -14,14 +14,20 @@ export function Header() {
             <span className="material-symbols-outlined text-[2rem] -mr-2">
               tab
             </span>
-            <Link to="">TabNews</Link>
+            <Link to="" className="hover:text-gray-300">
+              TabNews
+            </Link>
             <Link
               to=""
-              className={`${activeRoute === "/" && "border-b border-b-white"}`}
+              className={`${
+                activeRoute === "/" && "border-b border-b-white"
+              } hover:text-gray-300`}
             >
               Relevantes
             </Link>
-            <Link to="">Recentes</Link>
+            <Link to="" className="hover:text-gray-300">
+              Recentes
+            </Link>
           </nav>
           <nav className="flex items-center space-x-4">
             <button
