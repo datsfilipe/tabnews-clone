@@ -1,7 +1,6 @@
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { List } from "../components/List/List";
-import { Separator } from "../components/Separator";
 
 const data = [
   "Item 1",
@@ -23,7 +22,6 @@ function Home() {
       <div className="container mx-auto">
         <List items={data} pageSize={2} />
       </div>
-      <Separator />
       <Footer />
     </main>
   );
