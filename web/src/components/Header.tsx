@@ -1,21 +1,29 @@
 import { useState } from "react";
+import { Link } from "@tanstack/router";
+import { router } from "../routes";
 
 export function Header() {
   const [darkMode, setDarkMode] = useState(false);
+  const activeRoute = router.state.currentLocation.pathname;
 
   return (
     <nav className="bg-brand text-white font-medium">
       <div className="px-6">
         <div className="flex justify-between text-[0.94rem] font-bold">
-          <div className="flex items-center py-4 space-x-4 -ml-2">
+          <nav className="flex items-center py-4 space-x-4 -ml-2">
             <span className="material-symbols-outlined text-[2rem] -mr-2">
               tab
             </span>
-            <a href="#">TabNews</a>
-            <a href="#">Relevantes</a>
-            <a href="#">Recentes</a>
-          </div>
-          <div className="flex items-center space-x-4">
+            <Link to="">TabNews</Link>
+            <Link
+              to=""
+              className={`${activeRoute === "/" && "border-b border-b-white"}`}
+            >
+              Relevantes
+            </Link>
+            <Link to="">Recentes</Link>
+          </nav>
+          <nav className="flex items-center space-x-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
               className={`${
@@ -34,7 +42,7 @@ export function Header() {
             </button>
             <a href="#">Login</a>
             <a href="#">Cadastrar</a>
-          </div>
+          </nav>
         </div>
       </div>
     </nav>
