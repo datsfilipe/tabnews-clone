@@ -37,11 +37,10 @@ function Home() {
   };
 
   return (
-    <main>
+    <>
       <Header />
-      <div className="container mx-auto">
+      <main className="container mx-auto p-6 max-w-5xl">
         <List items={data} pageSize={2} />
-      </div>
         {showScrollButton && (
           <button
             className="flex items-center justify-center hover:bg-neutral-100 bg-white p-3 rounded-md fixed bottom-4 right-4"
@@ -52,8 +51,9 @@ function Home() {
             </span>
           </button>
         )}
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
 
