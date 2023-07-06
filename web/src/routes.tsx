@@ -2,6 +2,7 @@ import { Route, Router } from "@tanstack/router";
 
 import { rootRoute } from "./_root";
 import Home from "./pages";
+import LatestPosts from "./pages/latestPosts";
 
 const indexRoute = new Route({
   getParentRoute: () => rootRoute,
@@ -9,7 +10,13 @@ const indexRoute = new Route({
   component: Home,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute]);
+const latestPostsRoute = new Route({
+  getParentRoute: () => rootRoute,
+  path: "recentes",
+  component: LatestPosts,
+});
+
+const routeTree = rootRoute.addChildren([indexRoute, latestPostsRoute]);
 
 export const router = new Router({
   routeTree,

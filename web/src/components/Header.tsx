@@ -18,14 +18,19 @@ export function Header() {
               <span>TabNews</span>
             </Link>
             <Link
-              to=""
+              to="/"
               className={`${
                 activeRoute === "/" && "border-b border-b-white"
               } hover:text-gray-300`}
             >
               Relevantes
             </Link>
-            <Link to="" className="hover:text-gray-300">
+            <Link
+              to="/recentes"
+              className={`${
+                activeRoute === "/recentes" && "border-b border-b-white"
+              } hover:text-gray-300`}
+            >
               Recentes
             </Link>
           </nav>
