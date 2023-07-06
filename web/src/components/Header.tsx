@@ -11,11 +11,11 @@ export function Header() {
       <div className="px-6">
         <div className="flex justify-between text-[0.94rem] font-bold">
           <nav className="flex items-center py-4 space-x-4 -ml-2">
-            <span className="material-symbols-outlined text-[2rem] -mr-2">
-              tab
-            </span>
-            <Link to="" className="hover:text-gray-300">
-              TabNews
+            <Link to="/" className="flex items-center hover:text-gray-300">
+              <span className="material-symbols-outlined text-[2rem] mr-2">
+                tab
+              </span>
+              <span>TabNews</span>
             </Link>
             <Link
               to=""
